@@ -1,5 +1,5 @@
-# Estante-Virtual
-Estante virtual estilizada com **Flex-box** Css.
+# Prateleira-Virtual
+Prateleira virtual estilizada com **Flex-box** Css.
 
-Preenchida com os meus livros&Hqs lidos em 2023
+Preenchida com os meus livros&Hqs já lidos.
 Modifique como quiser 😎🤙 
