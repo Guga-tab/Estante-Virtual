@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@250&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: #1818187c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+#tituloHeader{
+    padding-left: 15px;
+    color: #EA5455;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+header p{
+    display: inline-flex;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.3em;
+    color: #E4DCCF;
+}
+
+header a, p{
+    text-decoration: none;
+    color: #E4DCCF;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.4em;
+}
+
+i#burguer {
+    display: none;
+}
+
+nav > ul > li {
+    display: inline-block;
+}
+
+ul{
+    display: flex;
+    gap: 15px;
+}
+
+h1.titulo{
+    text-align: center;
+    margin: 15px auto 15px auto;
+    width: 300px;
+    color: #EA5455;
+    background-color: #E4DCCF;
+    border-radius: 8px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.801);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 5px;
+    user-select: none;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #002B5B;
+}
+
+main{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    user-select: none;
+}
+
+.container{
+    display: flex;
+    flex-flow: column;
+    row-gap: 25px;   
+    align-items: center;
+    list-style: none;
+    background-color:#1818187c; 
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.801);
+    width: 750px;
+    margin-top: 15px;
+}
+
+.container h2{
+    margin-top: 15px;
+    margin-bottom: 25px;
+    color: #E4DCCF;
+    text-decoration: hidden;
+    text-decoration: underline 3px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.alinharTexTImg{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    background-color: #002B5B;
+    padding: 8px;
+    border-radius: 8px;
+    width: 700px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.801);  
+    margin-bottom: 7px;
+}
+
+.alinharTexTImg p{
+    margin: 10px 0px 10px 10px;
+    text-align: justify;
+    font-size: 1.1em;
+    width: 500px;
+    color: #F9F5EB;
+    text-indent: 18px;
+}
+
+.alinharTexTImg img{
+    width: 180px;
+    height: 250px;
+    border: solid 4px #EA5455;
+    border-radius: 8px;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    margin: 0;
+}
+
+section span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4em;
+    font-weight: bolder;
+    margin: 15px 0px 15px 0px;
+    background-color: #EA5455;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.801);
+    border-radius: 8px;
+    width: 140px;
+    padding: 4px;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+footer{
+    margin-top: 25px; 
+    background-color: #1818187c;
+    padding: 8px;
+    text-align: center;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.3em;   
+    font-family: 'Poppins', sans-serif;
+}
+
+@media (max-width: 843px){
+    
+    .container{
+        display: flex;
+        flex-flow: column;
+        row-gap: 25px;   
+        align-items: center;
+        list-style: none;
+        background-color: #002B5B; 
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.801);
+        width: 400px;
+    }
+
+    .alinharTexTImg{
+        background-color:#1818187c;
+    }
+ 
+    .alinharTexTImg p{
+        display: none;
+    }
+     
+    .alinharTexTImg img{
+        width: 280px;
+        height: 380px;
+    }
+
+    .alinharTexTImg{
+        width: 300px;
+    }
+
+    #Dresponsi{
+        white-space: nowrap;
+        width: 12em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-left: 15px;
+    }
+
+    .lista{
+        display: none;
+    }
+
+    .lista.show{
+        display: block;
+        display: flex;
+        flex-flow: column;
+        gap: 5px;
+        
+        position: absolute;
+        top: 67px;
+        right: 0;
+
+        background-color: #1818187c;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.507);
+        
+        padding-bottom: 3px;
+        border-bottom-left-radius: 10px;
+        width: 150px;
+
+        transition: 0.2 all;
+    }
+
+    header p {
+        display: none;
+    }
+
+    .botao{
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 15px;
+    }
+}

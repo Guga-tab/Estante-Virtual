@@ -1,206 +1,256 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
+<html lang="pt-br">
+    <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prateleira virtual</title>
     <link rel="icon" href="https://cdn.icon-icons.com/icons2/1286/PNG/512/59_85246.png">
-    <link rel="stylesheet" href="style.css">
-    <title>Livros Lidos 2023</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/media-query.css">
 </head>
-<body>
-
-    <h1>Livros Lidos 2023</h1>
-
+<body onresize="mudouTamanho()">
+    <header>
+        <h1 id="tituloHeader">Prateleira Virtual</h1>
+        <i id="burguer" class="material-icons" onclick="clickMenu()">menu</i>
+        <nav id="itens">
+            <ul>
+                <p>Filtrar por:</p>
+                <li><a href="#" id="mes">Mês</a></li>
+                <li><a href="#" id="ano">Ano</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <h1 class="titulo">Livros Lidos 2023</h1>
+    
     <main>
-        <ul class="container">
-            <span>Janeiro</span>
-
-            <li type="">
+        <div class="container">
+            
+            <section id="janeiro">
+                <span>Janeiro</span>
+                
                 <h2>Zaratustra</h2>
                 <div class="alinharTexTImg">
-                <p>Após dez anos de isolamento na montanha, Zaratustra decide voltar ao convívio dos homens,
-                a fim de passar adiante o fruto de sua contemplação e anunciar a vinda do Übermensch, ou super-homem.
-                A tarefa do profeta, contudo, será tortuosa, pois poucos são os eleitos e muitos os seus inimigos.
-                Assim falou Zaratustra é um romance filosófico em que Nietzsche toma o nome do sábio persa 
-                criador do Zoroastrismo para esmiuçar algumas das questões fundamentais de sua obra, tais 
-                como a auto-superação e a necessidade de se libertar de qualquer força que iniba ou limite
-                a vida e a vontade do indivíduo.</p>
-                <img src="https://m.media-amazon.com/images/I/614XijkYzOL.jpg" alt="imgzara">  
-                </div> 
-            </li>
-
-            <span>Fevereiro</span>
-
-            <li type="">
-                <h2 id="Dresponsi" >O Morro dos ventos uivantes</h2>
-                <div class="alinharTexTImg">
-                <p>A trama ganha contornos sombrios quando Lockwood, o novo locatário da Granja da Cruz 
-                do Tordo, faz uma visita ao seu senhorio, Heathcliff, proprietário do Morro dos Ventos
-                Uivantes, e, durante uma terrível nevasca, precisa se abrigar na casa. A partir dessa
-                noite nada convencional revela-se a história da paixão entre Heathcliff e Catherine.</p>
-                <img src="https://m.media-amazon.com/images/I/41qWP43+KfL.jpg" alt="imgMorro">
-                </div>
-            </li>
-
-            <li type="">
-                <h2>Vida longa ao marinheiro</h2>                 
-                <div class="alinharTexTImg">
-                <p>Desistindo de sua vida anterior, Sr. Wilson se isola trabalhando como faxineiro 
-                de um navio, jogando videogames o tempo todo, e observando o tempo passar sem 
-                nenhum rumo. Entretanto, após a própria Morte questionando sua falta de ação
-                sobre seu destino, as ansiedades dele acabam se manifestando na forma de uma 
-                alucinação semelhante a como ele era antigamente. E, junto a isso, outros fantasmas 
-                de seu passado começam a ressurgir, lentamente o levando a enfrentar uma 
-                verdade difícil de esquecer.</p>
-                <img src="https://us-a.tapas.io/sa/a6/19b0070f-d36b-4eb3-9e05-669c4f862a81_z.png" alt="imgMarinheiro">
-                </div>
-            </li>
-
-            <span>Março</span>
-
-            <li type="">
-                <h2>A Ilha do Dr.Moreau</h2>
-                <div class="alinharTexTImg">
-                <p>Prendick é salvo de um naufrágio por um navio que está transportando animais
-                selvagens para uma ilha no Pacífico. Obrigado a seguir o mesmo destino, 
-                desembarca na ilha e conhece o Dr. Moreau, um cientista exilado por suas 
-                experiências não ortodoxas com animais. Preso nesse lugar, Prendick conhece
-                o resultado assustador das experiências do cientista.</p>
-                <img src="https://m.media-amazon.com/images/P/B08BX5PJLC.01._SCLZZZZZZZ_SX500_.jpg" alt="imgMoreau">
-                </div>
-
-            <li type="">
-                <h2>Fahrenheit 451</h2>
-                <div class="alinharTexTImg">
+                    <p>Após dez anos de isolamento na montanha, Zaratustra decide voltar ao convívio dos homens,
+                        a fim de passar adiante o fruto de sua contemplação e anunciar a vinda do Übermensch, ou super-homem.
+                        A tarefa do profeta, contudo, será tortuosa, pois poucos são os eleitos e muitos os seus inimigos.
+                        Assim falou Zaratustra é um romance filosófico em que Nietzsche toma o nome do sábio persa 
+                        criador do Zoroastrismo para esmiuçar algumas das questões fundamentais de sua obra, tais 
+                        como a auto-superação e a necessidade de se libertar de qualquer força que iniba ou limite
+                        a vida e a vontade do indivíduo.</p>
+                        <img src="https://m.media-amazon.com/images/I/614XijkYzOL.jpg" alt="imgzara">  
+                    </div> 
+                </section>
+                
+            
+                <section id="Fevereiro">
+                    <span>Fevereiro</span>
+                    
+                    <h2 id="Dresponsi" >O Morro dos ventos uivantes</h2>
+                    <div class="alinharTexTImg">
+                        <p>A trama ganha contornos sombrios quando Lockwood, o novo locatário da Granja da Cruz
+                            do Tordo, faz uma visita ao seu senhorio, Heathcliff, proprietário do Morro dos Ventos
+                            Uivantes, e, durante uma terrível nevasca, precisa se abrigar na casa. A partir dessa
+                            noite nada convencional revela-se a história da paixão entre Heathcliff e Catherine.</p>
+                            <img src="https://m.media-amazon.com/images/I/41qWP43+KfL.jpg" alt="imgMorro">
+                        </div>
+                        
+                        <h2>Vida longa ao marinheiro</h2>
+                        
+                        <div class="alinharTexTImg">
+                            <p>Desistindo de sua vida anterior, Sr. Wilson se isola trabalhando como faxineiro 
+                                de um navio, jogando videogames o tempo todo, e observando o tempo passar sem 
+                                nenhum rumo. Entretanto, após a própria Morte questionando sua falta de ação
+                                sobre seu destino, as ansiedades dele acabam se manifestando na forma de uma 
+                                alucinação semelhante a como ele era antigamente. E, junto a isso, outros fantasmas 
+                                de seu passado começam a ressurgir, lentamente o levando a enfrentar uma 
+                                verdade difícil de esquecer.</p>
+                                <img src="https://us-a.tapas.io/sa/a6/19b0070f-d36b-4eb3-9e05-669c4f862a81_z.png" alt="imgMarinheiro">
+                            </div>    
+                        </section>
+                        
+                        <section id="marco">
+                            <span>Março</span>
+                            
+                            <h2>A Ilha do Dr.Moreau</h2>
+                            <div class="alinharTexTImg">
+                                <p>Prendick é salvo de um naufrágio por um navio que está transportando animais
+                                    selvagens para uma ilha no Pacífico. Obrigado a seguir o mesmo destino, 
+                                    desembarca na ilha e conhece o Dr. Moreau, um cientista exilado por suas 
+                                    experiências não ortodoxas com animais. Preso nesse lugar, Prendick conhece
+                                    o resultado assustador das experiências do cientista.</p>
+                                    <img src="https://m.media-amazon.com/images/P/B08BX5PJLC.01._SCLZZZZZZZ_SX500_.jpg" alt="imgMoreau">
+                                </div>
+                                
+                                
+                                <h2>Fahrenheit 451</h2>
+                                <div class="alinharTexTImg">
                 <p>Guy Montag é um bombeiro. Sua profissão é atear fogo nos livros. Em um mundo
-                onde as pessoas vivem em função das telas e a literatura está ameaçada de
-                extinção, os livros são objetos proibidos, e seus portadores são considerados
-                criminosos. Montag nunca questionou seu trabalho; vive uma vida comum,
-                cumpre o expediente e retorna ao final do dia para sua esposa e para a
-                rotina do lar.</p>
-                <img src="https://m.media-amazon.com/images/I/51tAD6LyZ-L.jpg" alt="img451">
+                    onde as pessoas vivem em função das telas e a literatura está ameaçada de
+                    extinção, os livros são objetos proibidos, e seus portadores são considerados
+                    criminosos. Montag nunca questionou seu trabalho; vive uma vida comum,
+                    cumpre o expediente e retorna ao final do dia para sua esposa e para a
+                    rotina do lar.</p>
+                    <img src="https://m.media-amazon.com/images/I/51tAD6LyZ-L.jpg" alt="img451">
                 </div>
-            </li>
+        </section>
 
+        <section id="abril">
             <span>Abril</span>
-
-            <li type="">
-                <h2>O Mundo de sofia</h2>
-                <div class="alinharTexTImg">
-                <p>Às vésperas de seu aniversário de quinze anos, Sofia Amundsen começa a receber 
-                bilhetes e cartões-postais bastante estranhos. Os bilhetes são anônimos e perguntam
-                a Sofia quem é ela e de onde vem o mundo. Os postais são enviados do Líbano,
-                por um major desconhecido, para uma certa Hilde Møller Knag, garota a quem
-                Sofia também não conhece.</p>
-                <img src="https://m.media-amazon.com/images/I/81KfUf8JkcL.jpg" alt="imgSofia">
-                </div>
-            </li>
-
-            <span>Maio</span>
-
-            <li type="">
-                <h2 id="Dresponsi">Depois da Terra: A fera perfeita</h2>
-                <div class="alinharTexTImg">
-                <p>Expulsos da Terra pela poluição e o esgotamento dos recursos naturais, os últimos
-                humanos colonizaram e prosperaram em Nova Prime, um planeta remoto. Algumas décadas
-                depois, são surpreendidos por ataques brutais das naves dos Skrel - raça alienígena
-                que considera o planeta um local sagrado -, mas graças ao Corpo de Guardiões,
-                eficiente organização militar de defesa, derrotam os agressores. Após 400 anos
-                de paz, alguns habitantes influentes de Nova Prime começam a questionar a
-                necessidade do Corpo de Guardiões.</p>
-                <img src="https://m.media-amazon.com/images/I/91N+3TY-g9L.jpg" alt="imgFera">
-                </div>
-            </li>
-
-            <li type="">
-                <h2>O Chefão</h2>
-                <div class="alinharTexTImg">
-                <p>Tirano, chantagista, e assassino sua influência chega a todos os níveis da sociedade
-                americana. Conheça Don Corleone, um homem amigável, um homem justo, um homem arrazoado. 
-                O capo mais mortal da Máfia, o padrinho, o poderoso chefão.Mas nenhum homem se mantém
-                no topo para sempre, não quando ele tem inimigos dos dois lados da lei. À medida
-                que o já idoso Vito Corleone se aproxima do fim de uma longa vida no crime, seus filhos
-                precisam se preparar para administrar os negócios da família.</p>
-                <img src="https://http2.mlstatic.com/D_NQ_NP_633554-MLB69205371493_052023-W.jpg" alt="imgChefao">
-                </div>
-            </li>
-
-            <li type="">
-                <h2>A rainha vermelha</h2>
-                <div class="alinharTexTImg">
-                <p>O mundo de Mare Barrow é dividido pelo sangue: vermelho ou prateado. Mare e sua 
-                família são vermelhos: plebeus, humildes, destinados a servir uma elite prateada
-                cujos poderes sobrenaturais os tornam quase deuses. Mare rouba o que pode para
-                ajudar sua família a sobreviver e não tem esperanças de escapar do vilarejo miserável
-                onde mora. Entretanto, numa reviravolta do destino, ela consegue um emprego no
-                palácio real, onde, em frente ao rei e a toda a nobreza, descobre que tem um
-                poder misterioso… </p>
-                <img src="https://m.media-amazon.com/images/I/71XnifrVw3L.jpg" alt="imgVermelha">
-                </div>
-            </li>
-
-            <span>Julho</span>
-
-            <li type="">
-                <h2 id="Dresponsi">Batman e Filho - Coleção Lendas do Batman</h2>
-                <div class="alinharTexTImg">
-                <p> Quando aquela que o batman um dia amou, talia, filha de um dos maiores inimidos do 
-                    cavaleiro das trevas, ra's al ghul, reaparece com um exército de morcegos-humanos, 
-                    ela tem uma outra surpresa para o herói - seu filho. Damian wayne foi criado com a 
-                    brutal liga dos assassions, e seu ímpeto violento e agressivo ameaça demolir o mundo 
-                    do homem-morcego.</p>
-                <img src="https://hqrock.files.wordpress.com/2012/02/batman-robin-and-damien-by-andy-kubert.jpg" alt="imgBat&Filho">
-                </div>
-            </li>
-
-            <li type="">
-                <h2>Diário de um Banana 1</h2>
-                <div class="alinharTexTImg">
-                <p>Não é fácil ser criança. E ninguém sabe disso melhor do que Greg Heffley, que se vê 
-                 mergulhado no mundo do ensino fundamental, onde fracotes são obrigados a dividir os corredores com garotos mais
-                 altos, mais malvados e que já se barbeiam. Em Diário de um Banana, o autor e ilustrados Jeff 
-                 Kinney nos apresenta um herói improvável. Como Greg diz em seu diário. Só não espere que seja
-                 todo Querido Diário isso, Querido Diário aquilo. Para nossa sorte, o que Greg Heffley diz que fará e o que ele realmente 
-                 faz são duas coisas bem diferentes.</p>
-                <img src="https://m.media-amazon.com/images/I/51fn5ioe+dL._SX337_BO1,204,203,200_.jpg" alt="imgBanana">
-                </div>
-            </li>
-
-            <span>Agosto</span>
-
-            <li type="">
+                    <h2>O Mundo de sofia</h2>
+                    <div class="alinharTexTImg">
+                        <p>Às vésperas de seu aniversário de quinze anos, Sofia Amundsen começa a receber
+                            bilhetes e cartões-postais bastante estranhos. Os bilhetes são anônimos e perguntam
+                            a Sofia quem é ela e de onde vem o mundo. Os postais são enviados do Líbano,
+                            por um major desconhecido, para uma certa Hilde Møller Knag, garota a quem
+                            Sofia também não conhece.</p>
+                            <img src="https://m.media-amazon.com/images/I/81KfUf8JkcL.jpg" alt="imgSofia">
+                        </div>
+                    </section>
+                    
+                    <section id="maio">
+                        <span>Maio</span>
+                        <h2 id="Dresponsi">Depois da Terra: A fera perfeita</h2>
+                        <div class="alinharTexTImg">
+                            <p>Expulsos da Terra pela poluição e o esgotamento dos recursos naturais, os últimos
+                                humanos colonizaram e prosperaram em Nova Prime, um planeta remoto. Algumas décadas
+                                depois, são surpreendidos por ataques brutais das naves dos Skrel - raça alienígena
+                                que considera o planeta um local sagrado -, mas graças ao Corpo de Guardiões,
+                                eficiente organização militar de defesa, derrotam os agressores. Após 400 anos
+                                de paz, alguns habitantes influentes de Nova Prime começam a questionar a
+                                necessidade do Corpo de Guardiões.</p>
+                                <img src="https://m.media-amazon.com/images/I/91N+3TY-g9L.jpg" alt="imgFera">
+                            </div>
+                            <h2>O Chefão</h2>
+                            <div class="alinharTexTImg">
+                                <p>Tirano, chantagista, e assassino sua influência chega a todos os níveis da sociedade
+                                    americana. Conheça Don Corleone, um homem amigável, um homem justo, um homem arrazoado.
+                                    O capo mais mortal da Máfia, o padrinho, o poderoso chefão.Mas nenhum homem se mantém
+                                    no topo para sempre, não quando ele tem inimigos dos dois lados da lei. À medida
+                                    que o já idoso Vito Corleone se aproxima do fim de uma longa vida no crime, seus filhos
+                                    precisam se preparar para administrar os negócios da família.</p>
+                                    <img src="https://http2.mlstatic.com/D_NQ_NP_633554-MLB69205371493_052023-W.jpg" alt="imgChefao">
+                                </div>
+                    <h2>A rainha vermelha</h2>
+                    <div class="alinharTexTImg">
+                        <p>O mundo de Mare Barrow é dividido pelo sangue: vermelho ou prateado. Mare e sua
+                            família são vermelhos: plebeus, humildes, destinados a servir uma elite prateada
+                            cujos poderes sobrenaturais os tornam quase deuses. Mare rouba o que pode para
+                            ajudar sua família a sobreviver e não tem esperanças de escapar do vilarejo miserável
+                            onde mora. Entretanto, numa reviravolta do destino, ela consegue um emprego no
+                            palácio real, onde, em frente ao rei e a toda a nobreza, descobre que tem um
+                            poder misterioso… </p>
+                            <img src="https://m.media-amazon.com/images/I/71XnifrVw3L.jpg" alt="imgVermelha">
+                        </div>
+                    </section>
+                    
+                    <section id="julho">
+                        <span>Julho</span>
+                        
+                        <h2 id="Dresponsi">Batman e Filho - Coleção Lendas do Batman</h2>
+                        <div class="alinharTexTImg">
+                            <p> Quando aquela que o batman um dia amou, talia, filha de um dos maiores inimidos do
+                                cavaleiro das trevas, ra's al ghul, reaparece com um exército de morcegos-humanos,
+                                ela tem uma outra surpresa para o herói - seu filho. Damian wayne foi criado com a
+                                brutal liga dos assassions, e seu ímpeto violento e agressivo ameaça demolir o mundo
+                                do homem-morcego.</p>
+                                <img src="https://hqrock.files.wordpress.com/2012/02/batman-robin-and-damien-by-andy-kubert.jpg" alt="imgBat&Filho">
+                            </div>
+                            
+                            <h2>Diário de um Banana 1</h2>
+                            <div class="alinharTexTImg">
+                    <p>Não é fácil ser criança. E ninguém sabe disso melhor do que Greg Heffley, que se vê
+                     mergulhado no mundo do ensino fundamental, onde fracotes são obrigados a dividir os corredores com garotos mais
+                     altos, mais malvados e que já se barbeiam. Em Diário de um Banana, o autor e ilustrados Jeff
+                     Kinney nos apresenta um herói improvável. Como Greg diz em seu diário. Só não espere que seja
+                     todo Querido Diário isso, Querido Diário aquilo. Para nossa sorte, o que Greg Heffley diz que fará e o que ele realmente
+                     faz são duas coisas bem diferentes.</p>
+                     <img src="https://m.media-amazon.com/images/I/51fn5ioe+dL._SX337_BO1,204,203,200_.jpg" alt="imgBanana">
+                    </div>
+            </section>
+            
+            <section id="agosto">
+                <span>Agosto</span>
                 <h2 id="Dresponsi">O monge e o executivo</h2>
                 <div class="alinharTexTImg">
-                <p> Leonard Hoffman, um famoso empresário que abandonou sua brilhante carreira para se tornar monge em um mosteiro beneditino, é o personagem central desta envolvente história criada por James C. Hunter para ensinar de forma clara e agradável os princípios fundamentais dos verdadeiros líderes.
-                Se você tem dificuldade em fazer com que sua equipe dê o melhor de si no trabalho e gostaria de se relacionar melhor com sua família e seus amigos, vai encontrar neste livro personagens, ideias e discussões que vão abrir um novo horizonte em sua forma de lidar com os outros.
-                </p>
-                <img src="https://m.media-amazon.com/images/I/41FCTOZR7QL._SX332_BO1,204,203,200_.jpg" alt="imgMonge">
+                    <p> Leonard Hoffman, um famoso empresário que abandonou sua brilhante carreira para se tornar monge em um mosteiro beneditino, é o personagem central desta envolvente história criada por James C. Hunter para ensinar de forma clara e agradável os princípios fundamentais dos verdadeiros líderes.
+                        Se você tem dificuldade em fazer com que sua equipe dê o melhor de si no trabalho e gostaria de se relacionar melhor com sua família e seus amigos, vai encontrar neste livro personagens, ideias e discussões que vão abrir um novo horizonte em sua forma de lidar com os outros.
+                    </p>
+                    <img src="https://m.media-amazon.com/images/I/41FCTOZR7QL._SX332_BO1,204,203,200_.jpg" alt="imgMonge">
                 </div>
-            </li>
-
-            <span>Outubro</span>
-
-            <li type="">
+            </section>
+            
+            <section id="outubro">
+                <span>Outubro</span>
+                
                 <h2 id="Dresponsi">A estratégia do oceano azul</h2>
                 <div class="alinharTexTImg">
-                <p> Para os professores W. Chan Kim e Renée Mauborgne, o resultado de uma concorrência acirrada nada mais é que um oceano vermelho sangrento, repleto de rivais que lutam entre si por uma parcela de lucros cada vez menor. Com base em um estudo de 150 movimentos estratégicos (que abrangem mais de 100 anos e 30 setores), os autores afirmam que o êxito duradouro não decorre da disputa feroz entre concorrentes, mas da criação de “oceanos azuis” - novos e intocados espaços de mercado prontos para o crescimento.
-                </p>
-                <img src="https://m.media-amazon.com/images/I/71zvq8BIkmL._SY425_.jpg" alt="imgOceano">
+                    <p> Para os professores W. Chan Kim e Renée Mauborgne, o resultado de uma concorrência acirrada nada mais é que um oceano vermelho sangrento, repleto de rivais que lutam entre si por uma parcela de lucros cada vez menor. Com base em um estudo de 150 movimentos estratégicos (que abrangem mais de 100 anos e 30 setores), os autores afirmam que o êxito duradouro não decorre da disputa feroz entre concorrentes, mas da criação de “oceanos azuis” - novos e intocados espaços de mercado prontos para o crescimento.
+                    </p>
+                    <img src="https://m.media-amazon.com/images/I/71zvq8BIkmL._SY425_.jpg" alt="imgOceano">
                 </div>
-            </li>
-
-            <li type="">
+                
                 <h2 id="Dresponsi">Viagem ao Centro da Terra</h2>
                 <div class="alinharTexTImg">
-                <p> Um pergaminho escrito à mão com letras rúnicas escorrega de um livro de setecentos anos, trazendo a mensagem que motiva o professor Lidenbrock e seu sobrinho Axel a partir de Hamburgo para a mais estranha e arriscada expedição científica do século XIX. Seria delírio fazer uma viagem tão perigosa? Essa era a opinião de Axel, da qual seu tio não compartilhava. Não havia argumento ou teoria científica que fizesse o professor desistir e os dois partem rumo ao... centro da Terra!
-                </p>
-                <img src="https://m.media-amazon.com/images/I/61dr08lrBjL._SY425_.jpg" alt="imgViagem">
+                    <p> Um pergaminho escrito à mão com letras rúnicas escorrega de um livro de setecentos anos, trazendo a mensagem que motiva o professor Lidenbrock e seu sobrinho Axel a partir de Hamburgo para a mais estranha e arriscada expedição científica do século XIX. Seria delírio fazer uma viagem tão perigosa? Essa era a opinião de Axel, da qual seu tio não compartilhava. Não havia argumento ou teoria científica que fizesse o professor desistir e os dois partem rumo ao... centro da Terra!
+                    </p>
+                    <img src="https://m.media-amazon.com/images/I/61dr08lrBjL._SY425_.jpg" alt="imgViagem">
                 </div>
-            </li>
-
-        </ul>
-
-    </main>
-</body>
-</html>
+            </section>
+            
+            <h1 class="titulo">Livros lidos 2024</h1>
+            
+            <section id="Fevereiro24">
+                <span>Fevereiro</span>
+                
+                <h2 id="Dresponsi">A revolução dos bichos: Um conto de fadas</h2>
+                <div class="alinharTexTImg">
+                    <p> Escrita em plena Segunda Guerra Mundial e publicada em 1945 depois de ter sido rejeitada por várias editoras, essa pequena narrativa causou desconforto ao satirizar ferozmente a ditadura stalinista numa época em que os soviéticos ainda eram aliados do Ocidente na luta contra o eixo nazifascista. De fato, são claras as referências: o despótico Napoleão seria Stálin, o banido Bola-de-Neve seria Trotsky, e os eventos políticos - expurgos, instituição de um estado policial, deturpação tendenciosa da História - mimetizam os que estavam em curso na União Soviética. 
+                    </p>
+                    <img src="https://m.media-amazon.com/images/I/91BsZhxCRjL._SL1500_.jpg" alt="imgBicho">
+                </div>
+            </section>
+            
+            <section id="Junho24">
+                <span>Junho</span>
+                    <h2 id="Dresponsi">Assassin's Creed: Renascença</h2>
+                    <div class="alinharTexTImg">
+                        <p> Ao longo do caminho, Ezio terá de contar com a sabedoria de grandes mentores, como Leonardo da Vinci e Nicolau Maquiavel, sabendo que sua sobrevivência depende inteiramente de sua perícia e habilidade. Para os aliados, Ezio se tornará uma força de mudança, lutando por liberdade e justiça. Para os inimigos, ele se tornará uma ameaça, dedicado de corpo e alma à destruição dos tiranos que oprimem o povo italiano. Assim começa uma épica história de poder, vingança e conspiração.
+                        </p>
+                        <img src="https://m.media-amazon.com/images/I/81nc-0VvdjL._SL1500_.jpg" alt="imgAc2">
+                    </div>
+                </section>
+                
+                <section id="Julho24">
+                    <span>Julho</span>
+                    <h2 id="Dresponsi">Assassin's Creed: Irmandade</h2>
+                    <div class="alinharTexTImg">
+                        <p> Os verdadeiros inimigos serão revelados. Irmandade é o segundo livro na saga de games que é sucesso mundial: Assassin's Creed. A outrora influente e próspera cidade de Roma está em decadência. Há sofrimento e degradação por todo lado, e seus cidadãos vivem à sombra da impiedosa família Bórgia. Ezio Auditore, com o passar dos anos, ganhou força e sabedoria para manter e honrar o Credo dos Assassinos. É ele o único capaz de libertar os habitantes da tirania que assola esta região da Itália. Porém ainda mais ambicioso e implacável do que o velho inimigo Rodrigo Bórgia é seu filho Cesare, que não se importará em derramar o sangue de quem atrapalhar seus planos.
+                        </p>
+                        <img src="https://m.media-amazon.com/images/I/81sZbSic4BL._SL1500_.jpg" alt="imgAcB">
+                    </div>
+                    
+                    <h2 id="Dresponsi">William Shakespeare - Hamlet</h2>
+                    <div class="alinharTexTImg">
+                        <p> Hamlet, o Príncipe da Dinamarca, obra dramática shakespereana mais adaptada e encenada nos palcos de todo o mundo, é hoje uma das mais importantes e renomadas tragédias do dramaturgo inglês William Shakespeare. Ela foi provavelmente escrita entre 1599 e 1602, mas não há até hoje uma data comprovada da gênese deste clássico da dramaturgia.
+                        </p>
+                        <img src="https://m.media-amazon.com/images/I/71el-F8GlsL._SL1338_.jpg" alt="imgHamlet">
+                    </div>
+                    
+                    <h2 id="Dresponsi">Sherlock Holmes O cão dos Baskerville</h2>
+                    <div class="alinharTexTImg">
+                        <p> Sherlock Holmes e seu fiel assistente, o Dr. Watson, estão em um caso que parece ter sua origem em uma antiga maldição que ronda a família dos Baskerville. Quando o velho dono do Solar Baskerville, em Dartmoor, no condado de Devon (Inglaterra), é encontrado morto, o último dos Baskerville parte para assumir seu legado na companhia do Dr. Watson. A tarefa do braço direito de Holmes é mantê-lo vivo e a salvo do terrível e sobrenatural cão que assombra a família há gerações. Conseguirá ele escapar da maldição que pesa sobre sua cabeça?
+                        </p>
+                        <img src="https://m.media-amazon.com/images/I/814CWEGamCL._SL1500_.jpg" alt="imgCaoBaskerville">
+                    </div>
+                </section>
+            </div>
+        </main>
+        
+        <footer><a href="https://www.instagram.com/gugaxamps/" target="_blank">@gugaxamps</a></footer>
+        <script src="script/menu-burguer.js"></script>
+        <script src="script/search.js"></script>
+    </body>
+    </html>
+    
